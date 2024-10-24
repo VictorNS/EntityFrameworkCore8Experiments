@@ -29,7 +29,7 @@ try
 	//await EfJsonLogic.ExecuteUpdate(logger, context);
 	//await EfJsonLogic.ExecuteSelect(logger, context);
 	//await EfBulkLogic.ExecuteDelete(logger, context);
-	await EfBulkLogic.ExecuteUpdate(logger, context);
+	//await EfBulkLogic.ExecuteUpdate(logger, context);
 }
 catch (Exception ex)
 {
