@@ -15,6 +15,9 @@
 	1. Select & Where -> `JSON_QUERY`
 1. EF `ExecuteDeleteAsync`
 1. EF `ExecuteUpdateAsync` atomic changes are available
+1. ASP.NET Core EF logging
+1. ASP.NET Core `AddDbContext<>()` & `IDisposable`
+1. ASP.NET Core `AddDbContext<>()` vs `AddDbContextFactory<>()`
 
 Links:
 * [User-defined function mapping](https://learn.microsoft.com/en-us/ef/core/querying/user-defined-function-mapping)

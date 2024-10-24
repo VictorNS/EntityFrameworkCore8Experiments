@@ -68,4 +68,19 @@ public partial class MyContext : DbContext
 			.HasName("ufn_GetOrderRevenue");
 	}
 	#endregion functions
+
+	#region Dispose
+	/*
+	public override void Dispose()
+	{
+		Console.WriteLine("---MyContext::Dispose()");
+		base.Dispose();
+	}
+	public override ValueTask DisposeAsync()
+	{
+		Console.WriteLine("---MyContext::DisposeAsync()");
+		return base.DisposeAsync();
+	}
+	*/
+	#endregion Dispose
 }
