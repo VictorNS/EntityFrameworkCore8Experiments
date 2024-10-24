@@ -10,9 +10,11 @@
 1. EF `AsSingleQuery` vs `AsSplitQuery`
 1. EF client evaluation
 1. EF & JSON
-	1. `null` in an object
+	1. `null` in an JSON object
 	1. Update -> `JSON_MODIFY`
 	1. Select & Where -> `JSON_QUERY`
+1. EF `ExecuteDeleteAsync`
+1. EF `ExecuteUpdateAsync` atomic changes are available
 
 Links:
 * [User-defined function mapping](https://learn.microsoft.com/en-us/ef/core/querying/user-defined-function-mapping)
