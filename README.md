@@ -6,6 +6,7 @@
 	1. Custom logger
 1. Idempotent migration for SQL objects
 1. Experiments with a function
+1. `FromSql` uses `FormattableString`
 
 Links:
 * [User-defined function mapping](https://learn.microsoft.com/en-us/ef/core/querying/user-defined-function-mapping)
