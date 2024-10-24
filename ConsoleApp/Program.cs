@@ -16,8 +16,9 @@ try
 	using var context = new MyContext(optionsBuilder.Options);
 	#endregion create context
 
-	await MigrationLogic.ExecuteMigrations(logger, context);
-	await MigrationLogic.ExecuteSeeding(logger, context);
+	//await MigrationLogic.ExecuteMigrations(logger, context);
+	//await MigrationLogic.ExecuteSeeding(logger, context);
+	await FunctionLogic.ExecuteInList(logger, context);
 }
 catch (Exception ex)
 {

@@ -1,5 +1,6 @@
 ﻿using Data.Models;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection;
 
 namespace Data;
 
@@ -49,5 +50,22 @@ public partial class MyContext : DbContext
 				builder.OwnsOne(m => m.Contact);
 			});
 		});
+
+		FunctionMapping(modelBuilder);
 	}
+
+	#region functions
+	public decimal GetOrderRevenue(int orderId)
+			=> throw new NotImplementedException();
+
+	protected void FunctionMapping(ModelBuilder modelBuilder)
+	{
+		var dbFunction = typeof(MyContext).GetRuntimeMethod(nameof(GetOrderRevenue), [typeof(int)])
+			?? throw new ArgumentException($"GetOrderRevenue is expected");
+
+		modelBuilder
+			.HasDbFunction(dbFunction)
+			.HasName("ufn_GetOrderRevenue");
+	}
+	#endregion functions
 }

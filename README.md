@@ -4,7 +4,7 @@
 1. EF logging
 	1. Sensitive data & password
 	1. Custom logger
-1. 
+1. Idempotent migration for SQL objects
 
 Links:
 * [User-defined function mapping](https://learn.microsoft.com/en-us/ef/core/querying/user-defined-function-mapping)
