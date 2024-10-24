@@ -7,6 +7,8 @@
 1. Idempotent migration for SQL objects
 1. Experiments with a function
 1. `FromSql` uses `FormattableString`
+1. EF `AsSingleQuery` vs `AsSplitQuery`
+1. EF client evaluation
 
 Links:
 * [User-defined function mapping](https://learn.microsoft.com/en-us/ef/core/querying/user-defined-function-mapping)

@@ -21,7 +21,10 @@ try
 	//await FunctionLogic.ExecuteInList(logger, context);
 	//await FunctionLogic.ExecuteAsFunction(logger, context);
 	//await FunctionLogic.ExecuteAsSql(logger, context);
-	await RawSqlQueryLogic.ExecuteFromSql(logger, context);
+	//await RawSqlQueryLogic.ExecuteFromSql(logger, context);
+	//await EfQueryLogic.ExecuteSplitOneQuery(logger, context);
+	//await EfQueryLogic.ExecuteSplitManyQuery(logger, context);
+	await EfQueryLogic.ExecuteClientEvaluation(logger, context);
 }
 catch (Exception ex)
 {
