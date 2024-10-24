@@ -24,7 +24,10 @@ try
 	//await RawSqlQueryLogic.ExecuteFromSql(logger, context);
 	//await EfQueryLogic.ExecuteSplitOneQuery(logger, context);
 	//await EfQueryLogic.ExecuteSplitManyQuery(logger, context);
-	await EfQueryLogic.ExecuteClientEvaluation(logger, context);
+	//await EfQueryLogic.ExecuteClientEvaluation(logger, context);
+	//await EfJsonLogic.ExecuteCreate(logger, context);
+	//await EfJsonLogic.ExecuteUpdate(logger, context);
+	await EfJsonLogic.ExecuteSelect(logger, context);
 }
 catch (Exception ex)
 {

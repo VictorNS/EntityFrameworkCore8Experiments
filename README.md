@@ -9,6 +9,10 @@
 1. `FromSql` uses `FormattableString`
 1. EF `AsSingleQuery` vs `AsSplitQuery`
 1. EF client evaluation
+1. EF & JSON
+	1. `null` in an object
+	1. Update -> `JSON_MODIFY`
+	1. Select & Where -> `JSON_QUERY`
 
 Links:
 * [User-defined function mapping](https://learn.microsoft.com/en-us/ef/core/querying/user-defined-function-mapping)
