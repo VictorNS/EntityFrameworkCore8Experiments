@@ -17,6 +17,7 @@ try
 	#endregion create context
 
 	await MigrationLogic.ExecuteMigrations(logger, context);
+	await MigrationLogic.ExecuteSeeding(logger, context);
 }
 catch (Exception ex)
 {
