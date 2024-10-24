@@ -18,7 +18,9 @@ try
 
 	//await MigrationLogic.ExecuteMigrations(logger, context);
 	//await MigrationLogic.ExecuteSeeding(logger, context);
-	await FunctionLogic.ExecuteInList(logger, context);
+	//await FunctionLogic.ExecuteInList(logger, context);
+	//await FunctionLogic.ExecuteAsFunction(logger, context);
+	await FunctionLogic.ExecuteAsSql(logger, context);
 }
 catch (Exception ex)
 {
