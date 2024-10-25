@@ -1,6 +1,8 @@
-# EntityFrameworkCore8Experiments
+# Entity Framework Core 8 experiments
 
-## Content
+This repository is a collection of experiments exploring various aspects of EF Core 8. It delves into advanced usage patterns, performance optimizations, and best practices for working with EF Core in real-world scenarios. The experiments cover topics such as logging, migrations, data manipulation, and integration with ASP.NET Core.
+
+## Experiments
 1. EF logging
 	1. Sensitive data & password
 	1. Custom logger
@@ -19,7 +21,7 @@
 1. ASP.NET Core `AddDbContext<>()` & `IDisposable`
 1. ASP.NET Core `AddDbContext<>()` vs `AddDbContextFactory<>()`
 
-Links:
+## Useful links:
 * [User-defined function mapping](https://learn.microsoft.com/en-us/ef/core/querying/user-defined-function-mapping)
 * [SQL Queries](https://learn.microsoft.com/en-us/ef/core/querying/sql-queries)
 * [DbContext initialization](https://learn.microsoft.com/en-us/ef/core/dbcontext-configuration/)
@@ -27,7 +29,7 @@ Links:
 * [DI Disposal of services](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-8.0#disposal-of-services)
 
 
-Migrations:
+## Used migrations:
 ```
 dotnet ef migrations add Initial -c MyContext -o Migrations
 dotnet ef migrations add AddFunctionGetOrderRevenue -c MyContext -o Migrations
