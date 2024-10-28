@@ -8,6 +8,8 @@ This repository is a collection of experiments exploring various aspects of EF C
 	1. Custom logger
 1. Idempotent migration for SQL objects
 1. Experiments with a function
+	1. SQL function
+	1. Custom expression
 1. `FromSql` uses `FormattableString`
 1. EF `AsSingleQuery` vs `AsSplitQuery`
 1. EF client evaluation

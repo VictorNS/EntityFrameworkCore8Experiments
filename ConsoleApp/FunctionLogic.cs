@@ -80,4 +80,22 @@ internal class FunctionLogic
 		}
 		catch { }
 	}
+
+	internal static async Task ExecuteExpressionsInList(ConsoleFileLogger logger, MyContext context)
+	{
+		try
+		{
+			logger.WriteLine();
+			logger.WriteLine("await context.Orders.Select(x => new { x.Id, x.Customer, DayFullMonthYear = EfFunctions.GetDayFullMonthYear(x.CreatedAt), DayShortMonthYear = EfFunctions.GetDayShortMonthYear(x.CreatedAt) }).ToListAsync();");
+			var revenues = await context.Orders
+				.Select(x => new { x.Id, x.Customer, DayFullMonthYear = EfFunctions.GetDayFullMonthYear(x.CreatedAt), DayShortMonthYear = EfFunctions.GetDayShortMonthYear(x.CreatedAt) })
+				.Where(x => x.DayFullMonthYear.Contains("er 2024"))
+				.ToListAsync();
+			logger.WriteLine(System.Text.Json.JsonSerializer.Serialize(revenues));
+		}
+		catch (Exception ex)
+		{
+			logger.WriteLine(ex.ToString());
+		}
+	}
 }

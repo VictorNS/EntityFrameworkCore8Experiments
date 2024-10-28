@@ -30,6 +30,11 @@ public partial class MyContext : DbContext
 
 	protected override void OnModelCreating(ModelBuilder modelBuilder)
 	{
+		modelBuilder.Entity<Order>(entity =>
+		{
+			entity.Property(e => e.CreatedAt).HasDefaultValueSql("getutcdate()");
+		});
+
 		modelBuilder.Entity<OrderItem>(entity =>
 		{
 			entity.Property(e => e.Quantity).HasColumnType("decimal(19, 4)");
@@ -52,6 +57,7 @@ public partial class MyContext : DbContext
 		});
 
 		FunctionMapping(modelBuilder);
+		EfFunctions.FunctionMapping(modelBuilder);
 	}
 
 	#region functions
