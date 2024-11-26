@@ -6,7 +6,7 @@ namespace Data;
 public static class EfFunctions
 {
 	/// <summary>
-	/// CONVERT(NVARCHAR(15), 106)
+	/// CONVERT(NVARCHAR(15), value, 106)
 	/// </summary>
 	/// <param name="d">Any DateTime column</param>
 	/// <returns></returns>
@@ -34,8 +34,8 @@ public static class EfFunctions
 					arg,
 					new SqlFragmentExpression("106")
 				],
-				nullable: true,
 				argumentsPropagateNullability: [false, true, false],
+				nullable: true,
 				type: typeof(string),
 				typeMapping: null
 			)
@@ -50,8 +50,8 @@ public static class EfFunctions
 					arg,
 					new SqlFragmentExpression("'dd MMMM yyyy'")
 				],
-				nullable: true,
 				argumentsPropagateNullability: [true, false],
+				nullable: true,
 				type: typeof(string),
 				typeMapping: null
 			)

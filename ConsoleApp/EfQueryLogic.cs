@@ -69,6 +69,6 @@ internal class EfQueryLogic
 
 	static string GetCustomerWithNumber(string customer, int id)
 	{
-		return customer + " #" + id;
+		return customer + " #" + id + " (" + DateTime.UtcNow.Month + ")";
 	}
 }

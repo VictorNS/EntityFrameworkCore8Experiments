@@ -11,7 +11,11 @@ try
 	optionsBuilder
 		.UseSqlServer("server=(local); database=MyContext; Integrated Security=true; Encrypt=false")
 		.EnableSensitiveDataLogging()
-		.LogTo(logger.WriteLine, Microsoft.Extensions.Logging.LogLevel.Information);
+		.LogTo(message =>
+		{
+			logger.WriteLine(message);
+			System.Diagnostics.Debug.WriteLine(message);
+		}, Microsoft.Extensions.Logging.LogLevel.Information);
 
 	using var context = new MyContext(optionsBuilder.Options);
 	#endregion create context

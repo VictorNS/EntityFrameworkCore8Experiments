@@ -4,13 +4,14 @@ This repository is a collection of experiments exploring various aspects of EF C
 
 ## Experiments
 1. EF logging
-	1. Sensitive data & password
+	1. Sensitive data
 	1. Custom logger
+	1. Hide ConnectionString's password
 1. Idempotent migration for SQL objects
 1. Experiments with a function
-	1. SQL function
+	1. SQL function (*)
 	1. Custom expression
-1. `FromSql` uses `FormattableString`
+1. SQL query `FromSql` & `SqlQuery` uses `FormattableString` (*)
 1. EF `AsSingleQuery` vs `AsSplitQuery`
 1. EF client evaluation
 1. EF & JSON
@@ -20,7 +21,7 @@ This repository is a collection of experiments exploring various aspects of EF C
 1. EF `ExecuteDeleteAsync`
 1. EF `ExecuteUpdateAsync` atomic changes are available
 1. ASP.NET Core EF logging
-1. ASP.NET Core `AddDbContext<>()` & `IDisposable`
+1. ASP.NET Core `AddDbContext<>()` & `IDisposable` (*)
 1. ASP.NET Core `AddDbContext<>()` vs `AddDbContextFactory<>()`
 
 ## Useful links:

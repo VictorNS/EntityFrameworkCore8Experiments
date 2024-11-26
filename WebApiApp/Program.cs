@@ -4,8 +4,8 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder();
 
 #region Add services to the container
-//builder.Services.AddDbContext<MyContext>(options => BuildEFOptions(options, builder.Environment.IsDevelopment()));
-builder.Services.AddDbContextFactory<MyContext>(options => BuildEFOptions(options, builder.Environment.IsDevelopment()));
+builder.Services.AddDbContext<MyContext>(options => BuildEFOptions(options, builder.Environment.IsDevelopment()));
+//builder.Services.AddDbContextFactory<MyContext>(options => BuildEFOptions(options, builder.Environment.IsDevelopment()));
 #endregion Add services to the container
 
 builder.Services.AddControllers();
